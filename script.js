@@ -11,10 +11,12 @@ fetch(endpoint, options)
             const li = document.createElement("li");
             const image = document.createElement("img");
             image.setAttribute("src", result.flag);
-
+            const paragraph = document.createElement("p");
+            const text = document.createTextNode(result.name);
             li.appendChild(image);
-
+            paragraph.appendChild(text);
             demoUl.appendChild(li);
+            demoUl.appendChild(paragraph);
         });
     })
     .catch((error) => console.log(error));
